@@ -3,103 +3,119 @@ public class Ex {
 
 	public static void main(String[] args) {
 		/*
-		 * 화면에 데이터를 출력하는 print(), printf(), println() 메서드
-		 * - System.out.XXX() 메서드 형태로 사용
-		 * 
-		 * 1. println() 메서드
-		 *  - 소괄호() 내부에 출력할 데이터를 전달하면 화면에 출력
-		 *  - 화면에 데이터를 출력한 뒤 줄바꿈을 수행
-		 *    => 출력 후 엔터키 입력한 것과 동일한 결과
-		 *  - 아무런 데이터도 전달하지 않을 경우 단순 줄바꿈 기능 수행
-		 *  
-		 * 2. print() 메서드
-		 *  - 소괄호() 내부에 출력할 데이터를 전달하면 화면에 출력
-		 *  - 화면에 데이터를 출력한 뒤 줄바꿈 수행하지 않음
-		 *  - 아무런 데이터도 전달하지 않을 경우 오류 발생! 
-		 *  
-		 * 3. printf() 메서드
-		 *  - 출력할 데이터가 변수 및 여러 가지 타입이 복합적으로 사용될 경우
-		 *    출력할 데이터의 모양을 유지하기 위한 용도로 사용
-		 *  - 소괄호() 내부에 출력할 데이터를 전달하면 화면에 출력
-		 *  - 화면에 데이터를 출력한 뒤 줄바꿈 수행하지 않음
-		 *  - 아무런 데이터도 전달하지 않을 경우 오류 발생! 
-		 *    <특징>
-		 *    - 소괄호() 내부에 문자열 데이터를 첫번째로 사용하고
-		 *      화면에 출력할 데이터 형식을 문자열 내부에서 지정함
-		 *      이 때, 변수 등을 사용할 경우 해당 변수가 표시될 자리를
-		 *      '형식 지정 문자'를 사용하여 표시만 하고
-		 *      문자열이 끝난 후 콤마(,) 기호 뒤에 형식 지정 문자에 들어갈
-		 *      데이터를 각각 명시함
-		 *      ex) printf("출력할데이터형식", 데이터1, 데이터2, ..., 데이터n)
+		 * 산술 연산 시 자동 형변환
+		 * - 연산 수행 전 피연산자끼리의 데이터타입을 일치시킨 후 연산을 수행
+		 * - 규칙1) int 타입보다 작은 타입(byte, short, char)끼리의 연산은
+		 *          모두 int 타입으로 자동 형변환 후 연산을 수행
+		 *          => 즉, 결과값이 무조건 int 타입이 됨
+		 *          ex) byte + byte = (int)byte + (int)byte = int + int = int
+		 *          ex2) char + int = (int)char + int = int + int = int
+		 * - 규칙2) int 타입보다 큰 타입과의 연산은 큰 타입으로 변환 후 수행
+		 *          => 즉, 결과값이 무조건 큰 타입이 됨
+		 *          ex) int + long = (long)int + long = long + long = long
+		 *          ex2) long + float = (float)long + float = float + float = float
 		 */
 		
-		System.out.println("Hello, World!"); // "Hello, World!" 출력 후 줄바꿈
-		System.out.println("강진석"); // "강진석" 출력 후 줄바꿈
+		byte b1 = 10, b2 = 20, b3;
+		System.out.println(b1 + b2);
 		
-		int age = 20;
-		System.out.println("나이는 age세 입니다."); // age 가 문자열로 취급됨
-		// 만약, age 라는 변수를 사용하여 데이터를 활용해야하는 경우
-		// 문자열 바깥에 + 기호를 사용하여 변수를 문자열에 연결해야 함
-		System.out.println("나이는 " + age + "세 입니다.");
+		// b1과 b2의 연산 결과를 byte 타입 변수 b3에 저장할 때 문제 발생!
+//		b3 = b1 + b2; // 오류 발생! byte + byte = int + int = int
+		// 저장하려는 변수 데이터타입이 byte라서 문제 발생!
+		// => int 타입을 byte 타입으로 저장하려면 강제 형변환(byte) 필요!
+//		b3 = (byte)b1 + (byte)b2; // 다시 각각 int 로 변환되므로 또 오류 발생!
+		// => b3 = (int)(byte)b1 + (int)(byte)b2
 		
-		System.out.println("----------------"); // "---" 출력 후 줄바꿈
+		// 연산 결과에 형변환 연산자를 적용하여 byte 타입으로 변환해야한다!
+		b3 = (byte)(b1 + b2); // (int)byte + (int)byte = (byte)int = byte
+		System.out.println(b3);
 		
-		System.out.print("Hello, World!");
-		System.out.print("강진석");
-		System.out.println(); // 줄바꿈 수행(엔터키 역할)
-		System.out.print("Hello, World!");
-		System.out.print("강진석");
-		System.out.print(1);
-		System.out.println(); // 줄바꿈 수행(엔터키 역할)
-		System.out.println("----------------"); // "---" 출력 후 줄바꿈
+//		short s = b1 + b2; // 오류 발생! byte + byte = int + int = int
+		// short 타입 변수에 저장(자동 형변환) 불가!
+		short s = (short)(b1 + b2); // 연산결과(int)를 short 타입으로 변환 필수!
+		System.out.println(s);
 		
-		// 형식 지정 문자를 사용한 printf() 메서드
-		// %d : 10진수 1개를 표현
-		// %xd : x 자릿수만큼 자리를 차지
-		// %0xd : x 자릿수만큼 자리를 차지하고, 빈자리를 0으로 채움
-		System.out.printf("%d", 1);
-		// => System.out.println("1"); 와 같은 결과
-		System.out.println(); // 줄바꿈
-		System.out.printf("나이는 %d세 입니다.\n", 20);
-		System.out.printf("나이는 %d세 입니다.", age);
+		System.out.println("--------------------------");
 		
-		System.out.println(); // 줄바꿈
-		System.out.printf("현재 시각은\n%02d시 %02d분 %02d초 입니다.",14,34,5);
-		// %d 기호가 3개이므로, 데이터 3개가 순서대로 대입됨
+		char ch = 'A';
+		// char 타입 변수 ch2에 ch 값에 2를 더한 결과를 저장
+//		char ch2 = ch + 2; // 오류 발생! char + int = int + int = int
+		// 결과값이 int가 되어서 char 타입 변수에 저장 불가!
+		char ch2 = (char)(ch + 2); // 연산 결과를 char 타입으로 변환
+		// 'A' + 2 = 65 + 2 = 67이므로 결과값을 다시 char 타입으로 변환하면
+		// 67에 해당하는 문자 'C'(67을 char 타입으로 변환한 데이터) 가 저장됨
+		System.out.println(ch2);
 		
-		
-		System.out.println(); // 줄바꿈
-		
-		// %f : 실수 표현
-		// %.xf : 실수 표현(소수점 x 자리만큼만 표시)
-		System.out.printf("평균 나이는 %.1f세 입니다.\n", 27.55);
-		
-		// %c : 문자 표현
-		System.out.printf("정수 65에 해당하는 문자는 %c\n",'A');
-		System.out.printf("정수 65에 해당하는 문자는 %c\n", 65);
-		
-		// char 타입 변수 ch 에 문자 'r' 저장
-		char ch = 'r';
-		System.out.printf("%c\n", ch);
-		
-		// %s : 문자열 표현
-		// String 타입 변수 str에 문자열 "아이티윌 부산교육센터" 저장
-		String str = "아이티윌 부산교육센터";
-		System.out.printf("교육기관명 : %s\n", str);
-		
-		
-		String name = "강진석";
-		
-		System.out.println("나이는 " + age + "세 입니다. 이름은 " + 
-							name + "입니다." );
-		System.out.printf("나이는 %d세 입니다. 이름은 %s입니다.", age, name);
-		
-		
-		
+		System.out.println(ch + 2); // ch + 2 = int 이므로 문자 'C' 대신 67 출력
+		// => 결과값을 다시 char 타입으로 변환하면 문자 'C' 출력됨
+		System.out.println((char)(ch + 2)); // 67을 char 타입 변환하면 'C' 출력
 
+		System.out.println("---------------------------------------------");
+
+		int i = 100;
+		long l = 200;
+		
+		// int형 변수 i2 에 i + l 결과값을 저장
+//		int i2 = i + l; // int + long = long + long = long
+		int i2 = (int)(i + l); // int타입으로 강제형변환
+		System.out.println(i2);
+		
+		float f = 3.14f;
+//		long l2 = l + f; // long + float = float + float = float
+		long l2 = (long)(l + f);
+		System.out.println(l2);
+		
+		System.out.println("--------------------------");
+		
+		System.out.println(3 / 2);
+		// 나눗셈 연산(/)은 몫을 계산하며, int / int = int 가 되어
+		// 3 / 2 의 연산 결과는 정수 1 출력됨
+		// 만약, 3 / 2 결과를 1.5 의 결과값으로 얻고 싶을 경우
+		// 정수가 아닌 실수 형태의 나눗셈 연산으로 연산을 수행해야함
+		// 따라서, 최소한 피연산자 중 하나를 실수로 변환 후 연산을 수행
+		System.out.println((double)3 / 2); // double / int = double
+		System.out.println(3 / 2.0); // int / double = double
+		// => 주로, 수치 데이터는 .0 을 붙여서 실수로 변환하고
+		//    실수형 변수는 형변환 연산자로 변환을 한다.
+		
+		System.out.println("=============================");
+		
+		// 실수끼리의 연산(float 과 double 간의 연산)
+		float f1 = 0.1f;
+		double d1 = 0.1;
+//		System.out.println(f1);
+//		System.out.println(d1);
+		System.out.println(f1 + d1);
+		// float -> double로 변환하여 double + double = double 이 된다.
+		// 따라서, 0.1f + 0.1 = 0.1 + 0.1 = 0.2 인데
+		// 근사치 표현에 의해 잘못된 결과가 발생할 수 있다!
+		// => double -> float 타입으로 강제 변환 후 연산을 수행하거나
+		//    두 실수 모두 정수로 변환하여 연산을 수행 후 다시 실수로 변환
+		System.out.println(f1 + (float)d1);
+		System.out.println(((int)(f1 * 10) + (int)(d1 * 10)) / 10.0);
+		
+		System.out.println("====================================");
+		
+		// 리터럴끼리 연산시에는 자동 형변환이 발생하지 않는다!
+		byte b4 = 10 + 20; // byte 타입 범위 내의 정수는 byte 타입 그대로 연산
+		System.out.println(b4);
+		
+		// 단, 리터럴끼리의 연산이라도 표현 가능한 범위를 초과하면 오류 발생!
+//		byte b5 = 10 + 200; // byte 범위(127)를 초과하므로 int 로 취급됨
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
