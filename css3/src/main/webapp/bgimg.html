@@ -1,0 +1,72 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<link href="style.css" rel="stylesheet">
+<link href="bgimg.css" rel="stylesheet">
+</head>
+<body>
+<h1>background 배경</h1>
+ <ol>
+  <li>background-color: ; 배경 색상 지정</li>
+  <li>background-image:url("경로");배경 이미지 지정</li>
+ </ol>
+
+<h2>background-image의 속성들</h2>
+ <ul>
+  <li>background-repeat: ; 배경이미지의 반복 지정 
+   <ul>
+    <li>repeat</li>
+    <li>repeat-x</li>
+    <li>repeat-y</li>
+    <li>no-repeat</li>  
+   </ul>
+  </li> 
+  <li>background-size: ; 배경이미지의 크기 지정
+   <ul>
+    <li>cover 이미지 하나로 영역전체 다덮기 <br>
+    (이미지가 잘려나갈 수도 있음)</li>
+    <li>contain 이미지 하나로 최대한 영역을 다덮기
+    (이미지가 잘려나가지 않음)   </li>
+    <li>Xn Yn 가로세로 크기를 직접 지정</li>
+   </ul>
+  </li>
+  <li>background-position: ; 배경이미지의 위치 지정
+   <ul>
+    <li>left/center/right top/center/bottom</li>
+    <li>Xn Yn</li>
+   </ul>  
+  </li> 
+  <li>background-attachment: ;
+    배경이미지의 스크롤여부 지정
+   <ul>
+    <li>scroll
+    - 자신영역의 스크롤바에는 고정, 브라우저 스크롤바에는 스크롤.</li>
+    <li>fixed - 자신영역, 브라우저 스크롤바에 모두 고정.</li>
+    <li>local - 자신영역, 브라우저 스크롤바에 모두 스크롤.</li>
+   </ul>
+  </li>
+ </ul>
+
+<section id="sec01">
+<h2>background_attachment: ; 배경이미지의 스크롤여부</h2>
+<p class="att01">background_attachment: ;<br>
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+</p>
+<p class="att02">background_attachment: ;<br>
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+</p>
+<p class="att03">background_attachment: ;<br>
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+<br><br><br><br><br><br><br>background_attachment:scroll
+</p>
+</section>
+</body>
+</html>
+

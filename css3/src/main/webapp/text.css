@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+#sec01>p {border: 1px solid;
+width: 500px; }
+
+.ta01 {text-align: left;}
+.ta02 {text-align: center;}
+.ta03 {text-align: right;}
+.ta04 {text-align: justify;}
+/* 
+.ta04>b {font-size: 18px;}
+ */
+
+.ta04>span {
+ background-color: #afc;	
+ font-size: 18px;
+ font-weight: bold;}
+
+
+ 
+  /* 2. text-indent  들여쓰기 */
+.ti01 {text-indent: 30px;}
+.ti02 {text-indent: 30%;}
+.ti03 {text-indent:0.5em;}
+.ti04 {text-indent: -4em;}
+
+.ti05 {text-indent: 1em;}
+
+.r_cnt {text-align: center;
+ color: #f00;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

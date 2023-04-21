@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS basic</title>
+<link href="basic.css" rel="stylesheet">
+<style type="text/css">
+ #int {background-color: #cfc;
+  color: #060;}
+  
+ .red {color: red;} 
+ .blue {color: blue;} 
+ .gr {color: green;}
+ 
+ .brdr01 {border: 3px solid #557;}
+ 
+ li {padding: 1em;}
+</style>
+</head>
+<body>
+<h1>css basic</h1>
+
+<h2>1. css 적용방식 3가지</h2>
+<ul>
+ <li id="ext">External CSS - 외부파일방식. <br>
+  css소스를 *.css 형식으로 독립시키고 웹문서와 연결해서 적용.
+  (&lt;head&gt;안에 &lt;link href="*.css" rel="stylesheet"&gt;) <br>  
+  여러 웹문서에 통일성 있는 디자인 적용이 가능하며 수정 용이, 유지보수 용이.<br>
+ </li>
+ <li id="int">Internal CSS - 내장방식. <br>
+  css소스가 &lt;head&gt;안에 &lt;style&gt;영역에 존재.
+  (&lt;style type="text/css"&gt; ... &lt;/style&gt;)<br>
+  태그와 분리 되어있으나 웹문서에 종속적이어서 해당 페이지에만 적용됨.
+ </li>
+ <li style="background-color: #ccc;color: #f00;">Inline CSS - 인라인방식.<br>
+  css소스를 해당 태그 바로 뒤에 style="css속성:속성값;"형식으로 적용.<br>
+  태그와 붙어있어 소스가 길어지고 수정이 곤란하며 유지보수에 불리하고 통일성 있는 디자인 곤란<br>
+  세가지 방식중 적용 CSS우선순위가 가장 높음.
+ </li>
+</ul>
+
+<h2>2. css문법</h2>
+ <p id="sel">선택자 {속성:속성값;}</p>
+
+<h2>3. css 대표 선택자 3가지</h2>
+<ul>
+ <li class="red brdr01">tag선택자 - 태그 그대로를 선택자로 활용. 강제 적용, 자동 적용.</li>
+ <li class="blue brdr01">id선택자 - 태그 뒤에 id를 추가해서 id값을 선택자(#id값)로 활용. <br>
+  해당 내용이 다른 태그에 적용될 수 없음. 주로 구조적 용도로 이용.
+ </li>
+ <li class="gr brdr01">class선택자 - 태그 뒤에 class를 추가해서 class값을 선택자(.class값)로 활용.<br>
+  class값은 중복 적용이 가능하므로 주로 디자인적 용도로 이용. <br>
+  class들을 조합해서 적용하거나 그룹으로 적용 가능.
+ </li>
+</ul>
+
+
+</body>
+</html>
+
+
+

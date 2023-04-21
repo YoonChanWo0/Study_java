@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+ body {background-image:url("img/super.jpg"); 
+  background-repeat:repeat;
+  background-size: cover;
+  background-position: left center; 
+  background-attachment:fixed;
+  font-size: 1.5em;
+  line-height: 2;
+ }
+
+ li {margin-bottom: 2em;}
+#sec01>p {border: 1px solid;
+width : 500px; height: 400px;
+display: inline-block;
+margin-right:1%;
+padding-left: 1em;
+overflow:scroll;
+background-image: url("img/gif/aquarium.gif");
+background-position: center center;
+background-size: cover;}
+
+.att01 {background-attachment: scroll;}
+.att02 {background-attachment: scroll;}
+.att03 {background-attachment: scroll;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

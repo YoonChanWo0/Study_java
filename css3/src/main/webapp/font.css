@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+h1 {background-color: #046;
+border-left:12px solid #09d;
+padding-left:12px;
+color: #fff;}
+
+   /* 1. font-size */
+#sec01 {font-size: 20px;}
+
+/* px */
+.fs01, .fs02, .fs03 {
+	/* 그룹선택자 */
+ background-color: #ccc;}
+.fs01 {font-size: 16px;}
+.fs02 {font-size: 12px;}
+.fs03 {font-size: 20px;}
+
+/* em 상위요소(부모)의 크기 기준 배수단위 */
+.fs04, .fs05, .fs06 {
+	background-color: #ccd;}
+.fs04 {font-size: 1em;}
+.fs05 {font-size: 0.75em;}
+.fs06 {font-size: 1.25em;}
+
+/* rem 최상위요소(html)의 크기 기준 배수단위 */
+.fs07, .fs08, .fs09 {
+	background-color: #dcc;}
+.fs07 {font-size: 1rem;}
+.fs08 {font-size: 0.75rem;}
+.fs09 {font-size: 1.25rem;}
+
+/* % */ 
+.fs10 {font-size: 100%;}
+.fs11 {font-size: 75%;}
+.fs12 {font-size: 125%;}
+
+
+
+
+ /*  */
+.fw01 {font-weight: 100;}
+.fw02 {font-weight: 200;}
+.fw03 {font-weight: 300;}
+.fw04 {font-weight: 400;}
+.fw05 {font-weight: 500;}
+.fw06 {font-weight: 600;}
+.fw07 {font-weight: 700;}
+.fw08 {font-weight: 800;}
+.fw09 {font-weight: 900;}
+.fw10 {font-weight: bold;}
+.fw11 {font-weight: normal;}
+.fw12>strong {
+/* A>B 부모자식선택자 */	
+	font-weight:normal;}
+
+/* 3. font-style: ; 글자 기울기 */
+
+.fst01 {font-style: italic;}
+.fst02 {font-style: oblique;}
+.fst03>i {font-style: normal;}
+.fst04>em {font-style: normal;}
+
+.ff01{font-family:"Verdava", "Helvetica", "Arial", sans-serif;}
+.ff02{font-family: "Times New Roman", "Garmond", "Gergia", serif;}
+.ff03{font-family: "Courier New", "Lucida Console", "Monaco"}
+	/* google font 
+	font-family: 'Gugi', 'cursive'
+	font-family: 'Nanum Gothic', 'sans-serif'
+	font-family: 'Nanum Myeongjo' , serif;
+	font-family: 'Nanum Pen Script', cursive;
+	*/
+.nm{font-family: 'Nanum Myeongjo' , serif;}
+.ff04{font-family: 'Nanum Pen Script', cursive;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

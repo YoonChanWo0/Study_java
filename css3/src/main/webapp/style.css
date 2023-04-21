@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+ /* style.css는 수업시간 공용 스타일 */
+h1 {background-color: #046;
+border-left:12px solid #09d;
+padding-left:12px;
+color: #fff;}
+
+section {border: 3px solid #ccc; 
+margin: 3em 1em;
+padding: 1em;} 
+
+section>h2 {/* 선택자 A>B는 부모인 A의 바로
+아래 자식인 B요소를 불러오는 관계선택자 */
+background-color: #ccc;
+border-left:10px solid;
+padding:4px 0 3px 8px;
+color: #046; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

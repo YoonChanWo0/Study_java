@@ -1,0 +1,29 @@
+@charset "UTF-8";
+#sec01, sec02{
+	display: inline-block;
+	width:45%;
+}
+
+
+/*1. img float; left; */
+#sec01 img{float: left;
+margin-right: 1em;}
+
+/*2. img float; right; */
+#sec02 img {float: right;}
+
+#sec03 {overflow: hidden; }
+
+#sec03>p {border : 1px solid red;
+float:left;
+width:400px;}
+
+/*4. img float; right; */
+#sec04 {overflow: hidden;}
+
+#sec04>p {border: 1px solid red;
+float : right;
+width : 300px;}
+
+.p07 {clear: both;}
+
