@@ -1,0 +1,185 @@
+﻿<html>
+ <head> 
+  <title>목록 만들기</title>
+ </head>
+ <body>
+ <hr>
+ <h1>list - 목록 만들기</h1>
+ <hr>
+ <h2>목록의 종류</h2>
+  <p> 
+   순서 없는 목록(unordered list) = &lt;ul&gt; <br>  
+   순서 있는 목록(ordered list) = &lt;ol&gt; <br>
+   정의 목록(description list) = &lt;dl&gt;
+  </p>
+
+ <hr>
+ <h2>1. 순서 없는 목록 = &lt;ul&gt;</h2>
+ <ul>
+  <li>coffee</li>
+  <li>tea</li>
+  <li>milk</li>
+ </ul>
+
+ <ul>
+  <li>web</li>
+  <li>java</li>
+  <li>jsp</li>
+  <li>db</li>
+ </ul>
+
+ <h4>문제. 순서 없는 목록 만들기</h4>
+ <ul>
+  <li><b>html</b></li>
+  <li>css</li>
+  <li>javascript</li>
+ </ul>
+
+ <hr>
+ <h2>2. 순서 있는 목록 = &lt;ol&gt;</h2>
+ <ol>
+  <li>coffee</li>
+  <li>tea</li>
+  <li>milk</li>
+ </ol>
+
+ <ol>
+  <li>web</li>
+  <li>java</li>
+  <li>job</li>
+  <li>jsp</li>
+  <li>db</li>
+ </ol>
+
+ <h4>문제. 순서  있는 목록 만들기 <small>(빛의 삼원색...)</small></h4>
+ <!-- 각 색상별 최소 0에서 최대 255까지 값을 지정함 -->
+ <ol> 
+  <li>red    = rgb(255,0,0) = #ff0000</li>
+  <li>green  = rgb(0,255,0) = #00ff00</li>
+  <li>blue   = rgb(0,0,255) = #0000ff</li>
+  <li>white  = rgb(255,255,255) = #ffffff</li>
+  <li>black  = rgb(0,0,0)       = #000000</li>
+  <li>yellow = rgb(255,255,0) = #ffff00</li>
+ </ol>
+
+ <h3>목록 앞의 모양 바꾸기 - type="1/a/A/i/I"</h3>
+ 
+ <ol type="1">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+	 
+ <ol type="a">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+ 
+ <ol type="A">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+ 
+ <ol type="i">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+ 
+ <ol type="I">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+
+<h3>목록 앞의 시작 바꾸기 -  start="n"</h3>  
+ <ol start="100">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+ 
+ <ol type="a" start="4">
+  <li>red</li>
+  <li>green</li>
+  <li>blue</li>
+ </ol>
+
+ <hr>
+ <h3>하위목록 만들기</h3> 
+ <ul>
+  <li>web
+   <ul>
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+   </ul>
+  </li> <!-- 종료 위치 주의 -->
+  <li>java</li>
+ </ul>
+
+ <h4>문제. 하위목록 만들기</h4> 
+ <ol>
+  <li>coffee 
+   <ul>
+    <li>hot</li>
+    <li>cold</li>
+   </ul>
+  </li>
+  <li>tea 
+   <ul>
+    <li>hot</li>
+    <li>cold
+     <ol type="I">
+      <li>red tea</li>
+      <li>cocoa</li>
+      <li>green tea</li>
+     </ol>  
+    </li>
+   </ul>
+  </li>
+ </ol>
+
+ <hr>
+ <h2>3. 정의 목록 = &lt;dl&gt;</h2>
+ <dl>
+  <dt>&lt;dl&gt;</dt>
+  <dd>정의 목록</dd>
+ </dl>
+
+ <dl>
+  <dt>html</dt>
+  <dd>웹페이지를 만드는 프로그램 언어.</dd>
+  <dd>Hyper Text Markup Language의 약자.</dd>
+  <dd>웹페이지의 구조를 담당.</dd>
+ </dl>
+
+
+ <dl>
+  <dt>html</dt>
+  <dd>웹페이지의 구조를 담당.</dd>
+  <dt>css</dt>
+  <dd>웹페이지의 디자인을 담당.</dd>
+  <dt>javascript</dt>
+  <dd>웹페이지의 동적인 기능을 담당.</dd>
+ </dl>
+ <h4>문제. 정의목록 만들기</h4>
+  <dl>
+    <dt>홍길동</dt>
+    <dd> ~~~</dd>
+    <dd> ~~~ ~~~</dd>
+    <dd> ~~~ ~~~ ~~~</dd>
+  </dl>
+
+
+
+ </body>
+</html>
+
+
+
+
+
+

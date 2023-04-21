@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a태그로 링크 걸기</title>
+</head>
+<body>
+<h1>a태그로 링크 걸기</h1>
+<p>
+ <b>&lt;a href="경로"&gt;...&lt;/a&gt;</b> <br>
+ 링크 걸린 텍스트는 밑줄이 생기고 커서는 손모양으로 바뀌며,<br>
+ 색상은 파랑(초기링크), 빨강(활성화링크), 보라(방문한링크) 로 나타남
+</p>
+<ol>
+ <li>절대경로로 링크 걸기  <br>
+   <a href="https://pixabay.com/">이미지무료 site</a> 
+    <a href="https://www.w3schools.com/" title="웹관련 공부를 할 수 있는 곳">다있쏘</a>
+     <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
+ </li>
+ <li>상대경로로 링크 걸기 
+   <ul>
+     <li>*.htm/*.html (webpage)
+         <a href="test06.html"> image</a>
+         <a href="test05-1.html">form-2</a>
+      </li> 
+      <li>*.gif /*.jpg/*.png/... (이미지 file)
+         <a href="img/gif/pizza.gif">pizza.gif</a>
+         <a href="img/cat.jpg">cat.jpg</a>
+       </li>
+       <li>*.mp4/*.webm/*.ogg (movie file)
+          <a href="img/frog.mp4">frog.mp4</a>
+       </li>
+       <li>
+         *.txt (text  file) 
+         <a href="폼테스트용 텍스트.txt">폼테스트용</a>
+       </li>
+       <li><small><i> 웹브라우저가 처리 불가한 종류를 링크걸면 다운로드 됨. 
+         <a href="img.zip">img.zip</a></i></small> 
+       </li>
+  </ul>
+ </li>
+</ol>
+
+<h2>링크를 여는 방식 지정 - target="_self/_blank/..."</h2>
+<ul>
+ <li>_self 기본값. 현재 위치에서 열림</li>
+ <li><b>_blank 새 탭에서 열림</b> </li>
+ <li>_top 프레임구조로 나뉘지 않고 전체에서 열림</li> 
+ <li>_parent 한단계 상위(부모)창에서 열림 </li>
+</ul>
+ <a href="https://www.naver.com/" target="_blank">naver</a>
+ 
+<img  src="img/png/car.png">
+
+
+<h2>링크 걸린 이미지</h2>
+<a href="https://www.daum.net/" target="_blank">
+ <img alt="daumlogo" src="img/png/daumlogo.png" width="120">
+</a>  <br>
+  title="***"으로 링크나 이미지에 툴팁 추가 가능 <br>
+ <img alt="autumn" src="img/png/autumn.png" width="120" title="나뭇잎 이쁘지요">
+
+<h2>썸네일이미지</h2>
+<a href="img/building.jpg" target="_blank" title="사진 크게 보기">
+ <img src="img/building.jpg" width="50"></a>
+ <a href="img/cat.jpg" target="_blank" title="사진 크게 보기">
+ <img src="img/cat.jpg" width="50"></a>
+ <a href="img/samphan.jpg" target="_blank" title="사진 크게 보기">
+ <img src="img/samphan.jpg" width="50"></a>
+ <a href="img/super.jpg" target="_blank" title="사진 크게 보기">
+ <img src="img/super.jpg" width="50"></a>
+ <a href="img/vintage.jpg" target="_blank" title="사진 크게 보기">
+ <img src="img/vintage.jpg" width="50"></a>
+ 
+<hr>
+<h2>top링크 - 페이지 위로 올라가는 링크 걸기</h2>
+  <a href="#">위로</a> 
+   
+   
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form-2</title>
+</head>
+<body>
+<!--  ctrl + F11 = 브라우저에서 미리보기 -->
+<!--  ctrl +spacebar =  자동완성(힌트) -->
+<!--  ctrl + shift + / = 주석태그 -->
+<h1>form-2 (html5에서 추가된 요소들)</h1>
+<form action="test.jsp" method="post">
+<ol>
+  <li>input type="<b>time</b>" 시간(오전/오후 시 분)을 지정하는 폼요소 <br>
+    <label for="tm">방문 예정시각은</label> 
+     <input type="time" id="tm"> 입니다 
+  </li>
+ <li>input type="<b>date</b>"  날짜(년월일) 지정하는 폼요소 <br>
+    <label for="dt">방문 예정은</label> <input type="date" id="dt"> 입니다 <br>
+    <label for="dt2">방문은</label> 
+      <input type="date" id="dt2" min="2023-02-17" max="2023-12-31"> 입니다<br> 
+      (min="2023-02-17" max="2023-12-31" 최소, 최대값 지정) 
+ </li>
+ <li>input type="<b>datetime-local</b>" 날짜와 시간(년월일 오전/오후 시 분)을 지정하는 폼요소 <br>
+    <label>다음 방문 예정은 <input type="datetime-local"> </label>  입니다   
+ </li>
+ <li>input type="<b>week</b>" 날짜(년주) 지정하는 폼요소<br>
+  <input type="week">
+ </li>
+ <li>input type="<b>month</b>" 날짜(년월) 지정하는 폼요소<br>
+  <input type="month">
+ </li>
+ <li>input type="<b>number</b>" 숫자를  지정하는 폼요소 <br>
+   <b>min="n"과  max="n"</b>로 최소, 최대값 지정 가능<br>
+   프로젝트는 <input type="number">개 입니다<br>
+   프로젝트 인원은 최소 <input type="number" min="1">명 부터 <br>
+   프로젝트 인원은 최대 <input type="number" max="20">명 입니다
+ </li>
+ <li>input type="<b>range</b>" 범위내의 값을 지정하는 폼요소 <br>
+  <input type="range"> (min="n"과 max="n"로 최소, 최대값 지정 가능)
+ </li>
+ <li>input type="<b>tel</b>" 연락처(전화번호) 지정하는 폼요소 <br>
+   <label>tel <input type="tel"></label> <br>
+      모바일브라우저에서 전화 걸기, 가상키패드 숫자형식 지원 가능 
+ </li>
+ <li>input type="<b>email</b>" 연락처(이메일) 지정하는 폼요소 <br>
+   <label>email  <input type="email"></label> <br>
+    브라우저에서 @유무,  @뒤의 완성을 체크 해주며,
+    모바일브라우저에서 가상키패드 영문형식이나 @ 등 지원 가능 
+ </li>
+ <li>input type="<b>url</b>"   연락처(웹주소) 지정하는 폼요소 <br>
+    <label>blog <input type="url"></label> <br>
+    브라우저에서  프로토콜 유무  체크 해주며,
+    모바일브라우저에서 가상키패드 영문형식이나 .com 등 지원 가능     
+ </li>
+ <li>input type="<b>search</b>" 검색단어를  지정하는 폼요소 <br>
+   <label>검색 <input type="search"> </label> 
+ </li>
+ <li>input type="<b>color</b>" 색상값을 지정하는 폼요소 <br>
+  <input type="color"> 
+ </li> 
+</ol>
+<hr>
+<input type="submit"> <input type="reset"> <br>
+<hr>
+<h2>&lt;button&gt; ... &lt;/button&gt; 으로 전송 (취소/일반) 버튼 생성</h2>
+ <button>확인</button> 기본 성격은 전송임. <br>
+ <button type="reset">취소</button> 취소용은 type="reset" 추가<br>
+<button type="button">난 <b>그냥</b> 버튼</button> 일반은 type="button" 추가
+<br>
+<button><img alt="" src="img_submit.gif">보내기 </button>
+시작과 종료 사이에 버튼글자를 쓰고 <br>다른 태그를 추가하여 글자를 꾸미거나
+이미지를 넣거나 웹아이콘을 넣을 수도 있음.
+
+<hr>
+<h2>&lt;fieldset&gt; ...&lt;/fieldset&gt; 폼요소들을 그룹화하기</h2>
+ <p>서로 관련있는 폼요소들끼리 fieldset으로 묶어주고<br>
+  <b>&lt;legend&gt; ...&lt;/legend&gt;</b> 로 해당 fieldset의 제목을 표시함 </p>
+<fieldset>
+ <legend>주문내용</legend>
+  <label>도서 <input type="number"></label>권 <br>
+  <label>연습장 <input type="number"></label>권
+</fieldset>
+<fieldset>
+ <legend>배송정보</legend>
+  <label>이름 <input type="text" ></label> <br>
+  <label>주소 <input type="text" ></label> <br>
+  <label>전화번호<input type="tel" ></label>
+</fieldset>
+
+<h2>html5 추가된 input 속성</h2>
+<fileset>
+<ol>
+<li><input type="text" autofocus="autofocus"><br>
+<b>autofocus="autofocus"(autofocus)</b>해당 요소에 자동으로 커서가 위치<li>
+<li><labal for="name">name</labal><input type="text" id="name" autocomplete="on"><br>
+autocomplete="on/off" 자동완성 기능을 키거나/끔<li>
+<li><input type="text" placehoder="ID"><hr>
+<labal>tel<input type="tel" placehoder="010-2222-3333"></labal><br>
+placehoder="***"입력 예시나 입력내용의 설명(공란일 떄만 보임)<li>
+<li><label>id<input type="text"required></label>
+required="required"(required=)필수입력 요소로 지정</li>
+<li><labal>프로젝트<input type="text" value="프로젝트1조"redonly="redonly"></label>
+redonly="redonly"(redonly)읽기만 가능한 요소로 지정
+</li>
+<li><labal>프로젝트1조<input type="text" value="팀장" disabled="disabled"></labal>
+disabled="disabled"(disabled)사용불가능한 요소로 지정
+</li>
+<li><input type="text"></li>
+<li><input type="text"></li>
+<li><input type="text"></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</fileset>
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <title>form</title>
+ </head>
+ <body>
+ <hr>
+ <h1>form으로 사용자가 정보전송 가능한 페이지 만들기</h1>
+ <form action="test.jsp" method="post">
+
+  <h2>form tag의 속성</h2>
+  <p>
+   action="" 사용자가 전송한 정보를 받을 서버파일<br>
+   method="post/get" 정보를 전송하는 방식
+  </p>
+  <hr>
+  <h2>여러 폼요소</h2>
+ <pre>
+   &lt;label for="abc"&gt;... &lt;/label&gt;     &lt;input type="" id="abc"&gt;
+   input에 대한 설명문을 label로 표시하며 서로 for의 값과 id값을 일치시킴
+ </pre>
+
+ <ol>
+   <li>&lt;input type="text"&gt; 주관식. 한 줄 글상자 <input type="text"> <br>
+     <label for="nm">name</label> <input type="text" id="nm"> <br>
+     <label for="id">id</label> 
+     <input type="text" id="id" maxlength="8" size="10">
+     maxlength="n" 으로 입력값의 최대길이 제한 가능.
+     (size="n"으로 입력상자의 길이 지정 가능.)
+   </li>
+   <li>&lt;input type="password"&gt; 주관식. 암호 글상자<br>
+    <label for="snn">주민번호 뒷자리</label>
+    <input type="password" id="snn" maxlength="7">
+   </li>
+   <li>&lt;input type="checkbox"&gt; 다중 선택형 객관식. 체크박스<br>
+      좋아하는 색상은? <br>
+     <label> <input type="checkbox">빨강</label>
+     <label><input type="checkbox" checked>초록 </label>
+     <label><input type="checkbox">파랑 </label>
+     <label><input type="checkbox" checked="checked">흰색</label>
+     <label><input type="checkbox"> 검정</label>
+     <label><input type="checkbox"> 핑크</label> <br>
+      checkbox (checked="checked") 로 초기값으로 설정 가능.
+   </li>
+   <li>&lt;input type="radio"&gt; 단일 선택형 객관식. 라디오버튼<br>
+     (단일 선택이 되려면 같은 질문의 선택지끼리 name의 값을 일치시킴)<br>
+     빨강색을 좋아하나요?
+       <label> <input type="radio" name="red" checked>네</label> 
+       <label> <input type="radio" name="red">아니오</label> <br>
+     검정색을 좋아하나요?
+       <label> <input type="radio" name="black" checked>네 </label>
+       <label> <input type="radio" name="black">아니오</label>
+   </li>
+   <li>&lt;input type="hidden"&gt; 사용자에게 안보이는 정보 전송<br>
+     <input type="hidden" value="silver">
+   </li>
+   <li>&lt;input type="file"&gt; 파일 전송용<br>
+     <label for="ph">photo</label> <input type="file" id="ph">
+   </li>
+   <li>&lt;textarea&gt; ... &lt;/textarea&gt;  주관식. 큰 글상자<br>
+     cols="n"와 rows="n" 로 가로 세로 크기 지정 가능<br>
+    <textarea cols="50" rows="5">자기소개</textarea> 
+   </li>
+   <li>&lt;select&gt; ... &lt;/select&gt; 공간 절약형 객관식.<br>
+     &lt;option&gt;으로 각 항목들을 묶어줌 <br>
+     좋아하는 색상은?
+    <select>
+     <option>빨강</option> 
+     <option>초록</option> 
+     <option>파랑</option>
+     <option>흰색</option>
+     <option>검정</option>
+     <option>핑크</option>      
+    </select>
+    <br>
+    싫어하는 색상은?
+    <select>
+     <option>빨강</option>
+     <option>초록</option>
+     <option>파랑</option>
+     <option>흰색</option>
+     <option selected>검정</option>
+     <option>핑크</option>
+    </select>
+      option에 selected(selected="selected")로 초기값으로 설정 가능.<br>
+    가장 자신있는 과목은?
+    <select size="5">
+     <option>직업기초</option>
+     <option>DB</option>
+     <option selected>html</option>
+     <option>css</option>
+     <option>javascript</option>
+     <option>java</option>
+     <option>jsp</option>
+     <option>oracle</option>
+     <option>network</option>
+    </select>
+     select에 size="n" 속성으로 상자형 가능.<br>
+    자신있는 과목은? (두개 이상 선택 가능)
+    <select multiple>
+     <option>직업기초</option>
+     <option>DB</option>
+     <option selected>html</option>
+     <option>css</option>
+     <option>javascript</option>
+     <option>java</option>
+     <option>jsp</option>
+     <option>oracle</option>
+     <option>network</option>
+    </select>
+
+     select에 multiple(multiple="multiple")속성으로 다중 선택형 상자 가능.
+    <br>
+    <hr>
+   option들을 그룹화하여 묶어 나타내려면  <br>
+   해당  option들을 optgroup태그로 묶어주고 <br>
+   label 속성으로 해당 옵션그룹의  제목이나 주제를 나타냄 <br>
+    <select size="4">
+     <optgroup label="부산진구">
+      <option>부전동</option>
+      <option>전포동</option>
+      <option>양정동</option>
+      <option>연지동</option>
+     </optgroup>
+     <optgroup label="연제구">
+      <option>연산1동</option>
+      <option>연산2동</option>
+      <option>연산3동</option>
+      <option>연산4동</option>
+     </optgroup>
+    </select>    
+   </li>
+   <li>&lt;input type="submit/reset/button"&gt; 전송/취소/일반 버튼<br>
+     <input type="submit">
+     <input type="reset">
+     <input type="button" value="click" onclick="alert('Why~~~~?')">
+     <br>    
+    <input type="submit" value="전송"> <input type="reset" value="취소">
+     value로 버튼의 글자 변경 가능
+   </li>
+    <li>&lt;input type="image"&gt; 전송용 이미지 <br>
+     <input type="image" src="img_submit.gif"> src로 이미지경로를 지정
+    </li>
+ </ol>
+
+
+
+
+
+ </form>
+
+ </body>
+</html>
+
+
+
+
+
+
